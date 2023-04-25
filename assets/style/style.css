@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.time{
+    width: 100%;
+    background-color: black;
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(37, 186, 212);
+}
+
+
+
+.slider {
+    max-width: 800px;
+	width: 100%;
+	position: relative;
+    margin: auto;
+}
+.slider-wrapper {
+	display: flex;
+	overflow: hidden;
+	position: relative;
+}
+
+.slide {
+	display: none;
+	position: absolute;
+	/* transform: scale(0); */
+	opacity: 0;
+	width: 0;
+	visibility: hidden;
+	transition: all 0.5s;
+	top: 0;
+	left: -100%;
+}
+.slide.active {
+	display: block;
+	/* transform: scale(1); */
+	width: 100%;
+	opacity: 1;
+	visibility: visible;
+	position: relative;
+	left: 0;
+}
+
+.slide .img {
+    width: 850px;
+	height: 400px;
+	object-fit: cover;
+}
+.desc {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 70%;
+	background-color: rgba(255, 255, 255, 0.4);
+	padding: 10px;
+	border-radius: 10px;
+	text-align: center;
+}
+
+.slide-btn {
+	position: absolute;
+	top: 50%;
+	left: 20px;
+	transform: translateY(-50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	color: white;
+	font-size: 30px;
+	border-radius: 50%;
+	background-color: darkorchid;
+}
+
+.slide-btn.next {
+	left: unset;
+	right: 20px;
+}
+
+
+.bullet-section{
+    position: absolute;
+    z-index: 1;
+    bottom: 1%;
+    left: 40%;
+    display: flex;
+    gap: 10px;
+}
+
+.bullet{
+  
+    width: 50px;
+    height: 50px;
+    border: 3px solid gold;
+    border-radius: 50%;
+}
+
+.bullet-active{
+    background-color: black;
+}
