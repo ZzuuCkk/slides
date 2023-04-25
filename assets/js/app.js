@@ -95,7 +95,6 @@ function mainSlider() {
 
 
     renderSlides();
-    bullets();
 }
 
 mainSlider();
